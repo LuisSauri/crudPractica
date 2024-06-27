@@ -76,5 +76,11 @@
 
         <!--end::Aside-->
     </header>
+
+    <main>
+        <div>
+            @yield('tabla')
+        </div>
+    </main>
 </body>
 </html>

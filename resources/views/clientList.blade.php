@@ -2,7 +2,7 @@
 
 @section('title', 'Crud')
 
-@section('main')
+@section('tabla')
 
 <table class="table table-bordered">
     <thead class="table-dark">
