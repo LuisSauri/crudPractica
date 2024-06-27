@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\crudList;
 use Illuminate\Http\Request;
 
 class crudController extends Controller
@@ -11,7 +12,8 @@ class crudController extends Controller
      */
     public function index()
     {
-        return view('clientList');
+        $listClients = crudList::all();
+        return view('clientList', compact('listClients'));
     }
 
     /**
@@ -27,7 +29,34 @@ class crudController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'apellido' => 'required',
+            'compañia' => 'required',
+            'ciudad' => 'required',
+            'pais' => 'requiered',
+            'telefono1' => 'required',
+            'telefono2' => 'required',
+            'email' => 'required',
+            'website' => 'required'
+
+
+        ]);
+        $listClients = new crudList();
+        $listClients->nombre = $request->input('nombre');
+        $listClients->apellido = $request->input('apellido');
+        $listClients->compañia = $request->input('compañia');
+        $listClients->ciudad = $request->input('ciudad');
+        $listClients->pais = $request->input('pais');
+        $listClients->telefono1 = $request->input('telefono1');
+        $listClients->telefono2 = $request->input('telefono2');
+        $listClients->email = $request->input('email');
+        $listClients->website = $request->input('web');
+
+        $listClients->save();
+
+        return redirect('/clientList')->with('status', 'Cliente añadido');
+
     }
 
     /**
