@@ -55,7 +55,12 @@
                 dolore magna aliqua.
             </div>
         </div>
-    </div>
+    </div>s
+    <main>
+        <div>
+            @yield('tabla')
+        </div>
+    </main>
 </body>
 
 </html>

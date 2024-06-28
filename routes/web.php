@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\crud_list;
 use App\Http\Controllers\crudController;
+use App\Http\Controllers\CrudListController;
 use Illuminate\Support\Facades\Route;
 
 /*
