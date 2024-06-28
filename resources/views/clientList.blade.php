@@ -2,7 +2,7 @@
 
 @section('title', 'Crud')
 
-@section('tabla')
+@section('content')
 
 <div class="container-flud px-4 px-lg-5">
     <div class="row">

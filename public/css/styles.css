@@ -1,3 +1,11 @@
+html{
+    height: 100%;
+  }
+  
+  body{
+    margin: 0;
+    }
+
 .pagination {
     margin-top: 5px;
 }
@@ -22,7 +30,7 @@
     border-color: #333;
     color: #fff;
 }
-
+/*
 :root {
     --background: #ffffff;
     --navbar-width: 256px;
@@ -393,4 +401,4 @@
     background-color: #333;
     border-color: #333;
     color: #fff;
-}
+}*/
