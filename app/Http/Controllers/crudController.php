@@ -21,7 +21,7 @@ class crudController extends Controller
      */
     public function create()
     {
-        //
+        return view('formAgregar');
     }
 
     /**

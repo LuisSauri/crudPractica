@@ -7,7 +7,13 @@
     <div class="container-flud px-4 px-lg-5">
         <div class="row">
             <div class="col-12">
-
+                <div class="d-md-flex justify-content-md-end gap-3 mt-3">
+                    <div class="d-md-flex gap-3 mt-3">
+                        <a href="{{ url('formAgregar') }}" class="btn btn-info">
+                            Agregar
+                        </a>
+                    </div>
+                </div>
                 <table class="table table-bordered mt-4 mb-4">
                     <thead class="table-dark">
                         <tr>
