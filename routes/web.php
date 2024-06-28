@@ -3,6 +3,8 @@
 use App\Http\Controllers\crud_list;
 use App\Http\Controllers\crudController;
 use App\Http\Controllers\CrudListController;
+use App\Models\crudList;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +24,20 @@ Route::get('/', function () {
 
 Route::get('/clientList', [crudController::class, 'index']);
 Route::get('/formAgregar', [crudController::class, 'create']);
+Route::post('/clientList', function (Request $request) {
+    $validatedData = $request->validate([
+        'nombre' => 'required|string',
+        'apellido' => 'required|string',
+        'company' => 'required|string',
+        'ciudad' => 'required|string',
+        'pais' => 'required|string',
+        'telefono1' => 'required|numeric',
+        'telefono2' => 'required|numeric',
+        'email' => 'required|email',
+        'website' => 'required|string',
+    ]);
+
+    crudList::create($validatedData);
+
+    return redirect('/clientList');
+}) -> name('clientList.store');

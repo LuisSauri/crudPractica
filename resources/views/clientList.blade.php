@@ -36,7 +36,7 @@
                                 <td class="text-center">{{ $client->id }}</td>
                                 <td class="text-center">{{ $client->nombre }}</td>
                                 <td class="text-center">{{ $client->apellido }}</td>
-                                <td class="text-center">{{ $client->compañia }}</td>
+                                <td class="text-center">{{ $client->company }}</td>
                                 <td class="text-center">{{ $client->ciudad }}</td>
                                 <td class="text-center">{{ $client->pais }}</td>
                                 <td class="text-center">{{ $client->telefono1 }}</td>

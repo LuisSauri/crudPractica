@@ -32,7 +32,7 @@ class crudController extends Controller
         $request->validate([
             'nombre' => 'required',
             'apellido' => 'required',
-            'compañia' => 'required',
+            'company' => 'required',
             'ciudad' => 'required',
             'pais' => 'requiered',
             'telefono1' => 'required',
@@ -45,7 +45,7 @@ class crudController extends Controller
         $listClients = new crudList();
         $listClients->nombre = $request->input('nombre');
         $listClients->apellido = $request->input('apellido');
-        $listClients->compañia = $request->input('compañia');
+        $listClients->company = $request->input('company');
         $listClients->ciudad = $request->input('ciudad');
         $listClients->pais = $request->input('pais');
         $listClients->telefono1 = $request->input('telefono1');
