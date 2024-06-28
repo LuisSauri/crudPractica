@@ -12,7 +12,7 @@ class crudController extends Controller
      */
     public function index()
     {
-        $listClients = crudList::all();
+        $listClients = crudList::paginate(5);
         return view('clientList', compact('listClients'));
     }
 
