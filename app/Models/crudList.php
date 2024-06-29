@@ -14,7 +14,7 @@ class crudList extends Model
     protected $fillable = [
         'nombre',
         'apellido',
-        'compañia',
+        'company',
         'ciudad',
         'pais',
         'telefono1',

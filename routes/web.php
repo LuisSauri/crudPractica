@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\crud_list;
 use App\Http\Controllers\crudController;
-use App\Http\Controllers\CrudListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/clientList', [crudController::class, 'index']);
+Route::get('/formAgregar', [crudController::class, 'create']);
+Route::post('/formAgregar', [crudController::class, 'store']);
