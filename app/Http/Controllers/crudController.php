@@ -88,6 +88,10 @@ class crudController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $client = crudList::find($id);
+
+        $client->delete();
+
+        return redirect('/clientList');
     }
 }

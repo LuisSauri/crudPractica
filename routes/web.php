@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('/clientList', [crudController::class, 'index']);
 Route::get('/formAgregar', [crudController::class, 'create']);
 Route::post('/formAgregar', [crudController::class, 'store']);
+Route::delete('/clientList/{id}', [crudController::class, 'destroy']);
