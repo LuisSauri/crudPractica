@@ -5,6 +5,8 @@
 @section('content')
 
 <section>
+    <div class="container-flud px-4 px-lg-5">
+        
     <form method="POST" action="{{ url('/formAgregar') }}">
         @csrf
         <div class="row mb-4">
@@ -83,6 +85,7 @@
             </div>
         </div>
     </form>
+    </div>
 </section>
 
 @endsection

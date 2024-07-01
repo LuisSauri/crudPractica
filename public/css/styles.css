@@ -4,7 +4,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  overflow-x: hidden;
 }
 
 /* Asegúrate de que el header y el sidebar estén alineados sin espacio */
@@ -200,6 +200,7 @@ a.article:hover {
     }
     #sidebarCollapse{
         display: none;
+        padding-left: 50%;
     }
 }
 
@@ -207,7 +208,7 @@ a.article:hover {
     TABLA
 ----------------------------------------------------- */
 table {
-  border-collapse: collapse; /* Para asegurarse de que las celdas se fusionen */
+  border-collapse: collapse;
 }
 
 table td, table th {
