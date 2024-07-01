@@ -43,7 +43,7 @@
                   <td class="text-center">{{$client->website}}</td>
                   <td>
                     <div class="d-flex flex-row justify-content-center">
-                      <a title="Actualizar" href="" class="btn btn-small btn-warning me-2"><i class="bi bi-pen-fill"></i></a>
+                      <a title="Actualizar" href="{{ url('clientList/' .$client->id. '/formEdit') }}" class="btn btn-small btn-warning me-2"><i class="bi bi-pen-fill"></i></a>
                       
                       <form action="{{ url('clientList/' . $client->id) }}" method="POST" onsubmit="return confirm('{{ __('¿Estás seguro de querer eliminar?') }}')">
                         <button title="Eliminar" class="btn btn-small btn-danger">

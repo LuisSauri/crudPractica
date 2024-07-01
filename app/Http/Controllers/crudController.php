@@ -72,15 +72,42 @@ class crudController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $client = crudList::find($id);
+        return view('/formEdit', compact('client'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'apellido' => 'required',
+            'company' => 'required',
+            'ciudad' => 'required',
+            'pais' => 'required',
+            'telefono1' => 'required',
+            'telefono2' => 'required',
+            'email' => 'required',
+            'website' => 'required'
+
+
+        ]);
+        $client = crudList::find($id);
+        $client->nombre = $request->input('nombre');
+        $client->apellido = $request->input('apellido');
+        $client->company = $request->input('company');
+        $client->ciudad = $request->input('ciudad');
+        $client->pais = $request->input('pais');
+        $client->telefono1 = $request->input('telefono1');
+        $client->telefono2 = $request->input('telefono2');
+        $client->email = $request->input('email');
+        $client->website = $request->input('website');
+
+        $client->save();
+
+        return redirect('/clientList');
     }
 
     /**
