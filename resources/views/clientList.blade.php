@@ -3,18 +3,17 @@
 @section('title', 'Crud')
 
 @section('content')
-
-    <div class="container-flud px-4 px-lg-5">
-        <div class="row">
-            <div class="col-12">
-                <div class="d-md-flex justify-content-md-end gap-3 mt-3">
-                    <div class="d-md-flex gap-3 mt-3">
-                        <a href="{{ url('formAgregar') }}" class="btn btn-info">
-                            Agregar
-                        </a>
-                    </div>
-                </div>
-                <table class="table table-bordered mt-4 mb-4">
+@endsection
+<div class="content">
+    <div class="row">
+        <div class="col-11">
+            <div class="col text-right mb-3">
+                <a href="{{ url('formAgregar') }}" class="btn btn-info">
+                    Agregar
+                </a>
+            </div>
+            <div class="">
+                <table class="table-responsive table-bordered mt-4 mb-4 border m-2">
                     <thead class="table-dark">
                         <tr>
                             <th class="text-center" scope="col">ID</th>
@@ -44,11 +43,12 @@
                                 <td class="text-center">{{ $client->email }}</td>
                                 <td class="text-center">{{ $client->website }}</td>
                                 <td>
-                                    <div class="d-flex flex-row">
-                                        <a title="Actualizar" href="" class="btn btn-small btn-warning me-2"><i
-                                                class="bi bi-pen-fill"></i></a>
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <a title="Actualizar"
+                                            href="{{ url('clientList/' . $client->id . '/formEdit') }}"
+                                            class="btn btn-small btn-warning me-2"><i class="bi bi-pen-fill"></i></a>
 
-                                        <form action="" method="POST"
+                                        <form action="{{ url('clientList/' . $client->id) }}" method="POST"
                                             onsubmit="return confirm('{{ __('¿Estás seguro de querer eliminar?') }}')">
                                             <button title="Eliminar" class="btn btn-small btn-danger">
                                                 <i class="bi bi-trash-fill"></i>
@@ -61,15 +61,17 @@
                         @endforeach
                     </tbody>
                 </table>
-                <div class="d-flex justify-content-center dark">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination">
-                            {{ $listClients->links() }}
-                        </ul>
-                    </nav>
-                </div>
-
             </div>
         </div>
 
-    @endsection
+        <div class="d-flex justify-content-center dark">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    {{ $listClients->links() }}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+@endsection

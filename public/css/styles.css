@@ -171,6 +171,14 @@ a.article:hover {
 /* ---------------------------------------------------
     TABLA
 ----------------------------------------------------- */
+table {
+  border-collapse: collapse;
+}
+
+table td, table th {
+  padding: 10px;
+}
+
 .pagination {
     margin-top: 5px;
 }
