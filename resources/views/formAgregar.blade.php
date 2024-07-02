@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div data-mdb-input-init class="form-floating mb-4">
+                    <div data-mdb-input-init class="f orm-floating mb-4">
                         <input type="text" id="telefono2" name="telefono2" class="form-control" placeholder="Teléfono 2"
                             oninput="checkForm()" />
                         <label class="form-label" for="telefono2">Teléfono 2</label>

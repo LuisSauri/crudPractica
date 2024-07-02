@@ -1,7 +1,6 @@
 @extends('layouts.template')
 
 @section('title', 'Crud')
-
 @section('content')
 @endsection
 <div class="content">
@@ -73,5 +72,4 @@
         </div>
     </div>
 </div>
-
 @endsection
